@@ -53,7 +53,7 @@
                         <li class="active nav-item"><a href="index.html">Home</a></li>
                         <li class="nav-item"><a href="features.html">Features</a></li>
                         <li class="nav-item"><a href="pricing.html">Pricing</a></li>
-                        <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" href="contact.html">Get A Demo</a></li>
+                        <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" href="#" data-toggle="modal" data-target="#modal-contacts">Get A Demo</a></li>
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->
@@ -74,7 +74,7 @@
         <div class="container text-center">
             <h2 class="title">Jumpstart your delivery service<br />today!</h2>
             <p class="intro">Nucleus is a full-featured software solution that powers restaurant delivery services</p>
-            <p><a class="btn btn-cta btn-cta-primary" href="contact.html">Try Nucleus Free</a></p>
+            <p><a class="btn btn-cta btn-cta-primary" href="#" data-toggle="modal" data-target="#modal-contacts">Try Nucleus Free</a></p>
             <button type="button" class="play-trigger btn-link " data-toggle="modal" data-target="#modal-video" ><i class="fa fa-youtube-play"></i> Watch the video</button>
         </div><!--//container-->
     </section><!--//promo-->
@@ -273,7 +273,7 @@
             <div class="container">
                <h2 class="title">Ready to jumpstart your delivery business?</h2>
                <p class="intro">Join the many<span class="counting">entrepreneurs</span> who are using Nucleus</p>
-               <p><a class="btn btn-cta btn-cta-primary" href="contact.html" target="_blank">Get Nucleus Now</a></p>
+               <p><a class="btn btn-cta btn-cta-primary" href="#" target="_blank"  data-toggle="modal" data-target="#modal-contacts">Get Nucleus Now</a></p>
             </div><!--//container-->
         </section><!--//cta-section-->
 
@@ -389,6 +389,40 @@
             </div><!--//modal-content-->
         </div><!--//modal-dialog-->
     </div><!--//modal-->
+
+    <div class="modal fade" id="modal-contacts" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="contact-form" class="contact-form" method="post" action="/backend/submit.php">
+                    <div class="row text-center">
+                        <div class="contact-form-inner col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-md-12">
+                                <h2 class="title text-center">Contact Us</h2>
+                                <div class="js-alert-holder"></div>
+                                <p class="intro text-center">We’d love to hear from you. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                <label class="sr-only" for="cname">Your name</label>
+                                <input type="text" class="form-control" id="cname" name="name" placeholder="Your name" minlength="2" required>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                <label class="sr-only" for="cemail">Email address</label>
+                                <input type="email" class="form-control" id="cemail" name="email" placeholder="Your email address" required>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                <label class="sr-only" for="cmessage">Your message</label>
+                                <textarea class="form-control" id="cmessage" name="message" placeholder="Enter your message" rows="12" required></textarea>
+                            </div>
+                             <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                <button type="submit" class="btn btn-block btn-cta btn-cta-primary">Send Message</button>
+                            </div>
+                        </div>
+                    </div><!--//row-->
+                    <div id="form-messages"></div>
+                </form><!--//contact-form-->
+            </div>
+        </div>
+    </div>
 
     <!-- Vimeo video API -->
     <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>

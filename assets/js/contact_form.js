@@ -7,7 +7,7 @@ $(document).ready(function () {
     success: function (data) {
       var data = $.parseJSON(data);
       if (data.success) {
-        $('#contact-form .contact-form-inner .row').prepend('<div class="alert alert-success">Your message has been successfully sent</div><br/>');
+        $('#contact-form .contact-form-inner .js-alert-holder').html('<div class="alert alert-success">Your message has been successfully sent</div><br/>');
         $('#contact-form')[0].reset();
       }
       else {

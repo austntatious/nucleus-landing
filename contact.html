@@ -56,7 +56,7 @@
                                 </ul>
                             </li><!--//dropdown-->
                             <li class="nav-item"><a href="login.html">Log in</a></li>
-                            <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" href="signup.html">Sign Up Free</a></li>
+                            <li class="nav-item nav-item-cta last"><a class="btn btn-cta btn-cta-secondary" href="#" data-toggle="modal" data-target="#modal-contacts">Sign Up Free</a></li>
                         </ul><!--//nav-->
                     </div><!--//navabr-collapse-->
                 </nav><!--//main-nav-->
@@ -132,7 +132,7 @@
             <div class="container">
                <h2 class="title">Ready to promote your product online?</h2>
                <p class="intro">More than <span class="counting">300,000</span> users are using nucleus</p>
-               <p><a class="btn btn-cta btn-cta-primary" href="https://wrapbootstrap.com/theme/nucleus-designed-for-products-WB0N38R04" target="_blank">Get nucleus Now</a></p>
+               <p><a class="btn btn-cta btn-cta-primary" href="#" target="_blank" data-toggle="modal" data-target="#modal-contacts">Get nucleus Now</a></p>
             </div><!--//container-->
         </section><!--//cta-section-->
 
@@ -239,6 +239,41 @@
     </footer><!--//footer-->
 
 
+    <div class="modal fade" id="modal-contacts" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="contact-form" class="contact-form" method="post" action="/backend/submit.php">
+                    <div class="row text-center">
+                        <div class="contact-form-inner col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-md-12">
+                                <h2 class="title text-center">Contact Us</h2>
+                                <div class="js-alert-holder"></div>
+                                <p class="intro text-center">We’d love to hear from you. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                <label class="sr-only" for="cname">Your name</label>
+                                <input type="text" class="form-control" id="cname" name="name" placeholder="Your name" minlength="2" required>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                <label class="sr-only" for="cemail">Email address</label>
+                                <input type="email" class="form-control" id="cemail" name="email" placeholder="Your email address" required>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                <label class="sr-only" for="cmessage">Your message</label>
+                                <textarea class="form-control" id="cmessage" name="message" placeholder="Enter your message" rows="12" required></textarea>
+                            </div>
+                             <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                <button type="submit" class="btn btn-block btn-cta btn-cta-primary">Send Message</button>
+                            </div>
+                        </div>
+                    </div><!--//row-->
+                    <div id="form-messages"></div>
+                </form><!--//contact-form-->
+            </div>
+        </div>
+    </div>
+
+    <!-- Vimeo video API -->
     <script type="text/javascript" src="compiled/total.js"></script>
 
 </body>
