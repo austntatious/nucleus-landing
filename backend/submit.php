@@ -1,6 +1,6 @@
 <?php
-  date_default_timezone_set('America/Los_Angeles');
-  define('ADMIN_EMAIL', 'creminds@gmail.com');
+  date_default_timezone_set('America/New_York');
+  define('ADMIN_EMAIL', 'info@nucleus.technology');
 
   $errors = array();
   if ($_POST['name'] == '') {
@@ -31,9 +31,9 @@
   else {
     require '../vendor/autoload.php';
 
-    // $transporter = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl')
-    //   ->setUsername($this->username)
-    //   ->setPassword($this->password);
+    $transporter = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, 'ssl')
+       ->setUsername($this->info@nucleus.technology)
+       ->setPassword($this->);
 
     $transport = Swift_MailTransport::newInstance();
 
