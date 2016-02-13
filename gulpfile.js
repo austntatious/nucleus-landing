@@ -5,11 +5,14 @@ var gulp 		= require('gulp'),
 	rename		= require('gulp-rename'),
 	gulpUtil 	= require('gulp-util');
 
+
+gulp.task('default', ['build:css', 'build:js']);
+
 gulp.task('build:js', function() {
 	return gulp.src('./src/js/*.js')
 		.pipe(concat('bundle.js'))
 		.pipe(gulp.dest('./dist/js/'))
-		.pipe(uglify().on('error', gulpUtil.log))
+		.pipe(uglifyJs().on('error', gulpUtil.log))
 		.pipe(gulp.dest('./dist/js/'));
 });
 
@@ -20,5 +23,3 @@ gulp.task('build:css', function() {
 		.pipe(uglifyCss().on('error', gulpUtil.log))
 		.pipe(gulp.dest('./dist/'));
 });
-
-gulp.task('default', ['build:css', 'build:js']);
