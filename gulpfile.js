@@ -1,25 +1,24 @@
-var concat 	= require('gulp-concat'),
-	uglify	= require('gulp-uglify'),
-	rename	= require('gulp-rename'),
-	jsFiles	= './src/js/*.js',
-	cssFiles= './src/css/*.css';
+var gulp 		= require('gulp'),
+	concat 		= require('gulp-concat'),
+	uglifyJs	= require('gulp-uglify'),
+	uglifyCss	= require('gulp-uglifycss'),
+	rename		= require('gulp-rename'),
+	gulpUtil 	= require('gulp-util');
 
 gulp.task('build:js', function() {
-	return gulp.src(jsFiles)
+	return gulp.src('./src/js/*.js')
 		.pipe(concat('bundle.js'))
-		.pipe(gulp.dest('./dist/js'))
-		.pipe(rename('bundle.min.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('./dist/js'));
+		.pipe(gulp.dest('./dist/js/'))
+		.pipe(uglify().on('error', gulpUtil.log))
+		.pipe(gulp.dest('./dist/js/'));
 });
 
 gulp.task('build:css', function() {
-	return gulp.src(cssFiles)
+	return gulp.src('./src/css/*.css')
 		.pipe(concat('styles.css'))
-		.pipe(gulp.dest('./dist'))
-		.pipe(rename('styles.min.css'))
-		.pipe(uglify())
-		.pipe(gulp.dest('./dist'));
+		.pipe(gulp.dest('./dist/'))
+		.pipe(uglifyCss().on('error', gulpUtil.log))
+		.pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('build', ['build:css', 'build:js']);
+gulp.task('default', ['build:css', 'build:js']);
