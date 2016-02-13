@@ -6,7 +6,7 @@ var gulp 		= require('gulp'),
 	gulpUtil 	= require('gulp-util');
 
 
-gulp.task('default', ['build:css', 'build:js']);
+gulp.task('default', ['build:css', 'build:mainjs', 'build:jquery']);
 
 gulp.task('build:jquery', function() {
 	return gulp.src('./src/js/jquery/*.js')
