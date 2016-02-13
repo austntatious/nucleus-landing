@@ -6,28 +6,18 @@
     <meta name="keywords" content="vehicle routing, dispatch software, delivery dispatch, automated dispatch, delivery driver, driver dispatch, driver management, fleet management, route optimization, logistics, last mile delivery, on-demand, food deliveries">
     <title>Nucleus - Powerful Dispatching Software</title>
     <!--pageMeta-->
-    <!-- Loading Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <!-- Loading Elements Styles -->
-    <link href="css/style.css" rel="stylesheet">
-    <!-- Loading Magnific-Popup Styles -->
-    <link href="css/magnific-popup.css" rel="stylesheet">
-    <!-- Loading Font Styles -->
-    <link href="css/iconfont-style.css" rel="stylesheet">
-    <!-- WOW Animate-->
-    <link href="scripts/animations/animate.css" rel="stylesheet">
-    <!-- Datepicker Styles -->
-    <link href="css/bootstrap-datepicker3.min.css" rel="stylesheet">
+    <!--Load styles-->
+    <link href="dist/styles.css" rel="stylesheet">
     <!-- Favicons -->
     <link rel="icon" href="https://s3.amazonaws.com/nucleus-landing-assets/images/nucleus+logo+favicon+.png">
-    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" href="dist/img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="dist/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="dist/img/favicons/apple-touch-icon-114x114.png">
     
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
-      <script src="scripts/html5shiv.js"></script>
-      <script src="scripts/respond.min.js"></script>
+      <script src="dist/js/html5shiv.js"></script>
+      <script src="dist/js/respond.min.js"></script>
     <![endif]-->
     <!--headerIncludes-->
 <style type="text/css"></style>
@@ -190,7 +180,8 @@ Clear dispatch instructions sent to the driver's mobile app, as well as other mo
 					<div class="col-md-5 col-md-offset-1">
 						<div class="form-container wow zoomIn" style="color: rgb(85, 85, 85); border-color: rgb(85, 85, 85); border-width: 0px; border-radius: 3px; font-size: 17px; background-color: rgb(255, 255, 255);" data-wow-duration="1s" data-wow-delay="0s" src="https://s3.amazonaws.com/images34214223/dispatch_wireframe.jpg">
 							<h3 class="title">Drop us a line</h3>
-							<form action="scripts/contact.php" role="form" id="contact_form" novalidate="novalidate">
+							<!--Add validation -->
+							<form action="dist/php/contact.php" role="form" id="contact_form" novalidate="novalidate">
 								<div class="form-group">
 									<input type="text" class="form-control" id="contact_name" placeholder="Full name" name="name">
 								</div>
@@ -269,23 +260,6 @@ Powering the core of on-demand businesses<br>
 		</footer></div>
     <!-- /#wrap -->
     <!-- JavaScript -->
-    <script src="scripts/jquery-1.11.2.min.js"></script>
-    <script src="scripts/bootstrap.min.js"></script>
-    <script src="scripts/jquery.validate.min.js"></script>
-    <script src="scripts/smoothscroll.js"></script>
-    <script src="scripts/jquery.smooth-scroll.min.js"></script>
-    <script src="scripts/placeholders.jquery.min.js"></script>
-    <script src="scripts/jquery.magnific-popup.min.js"></script>
-    <script src="scripts/jquery.counterup.min.js"></script>
-    <script src="scripts/waypoints.min.js"></script>
-    <script src="scripts/video.js"></script>
-    <script src="scripts/bigvideo.js"></script>
-    <script src="scripts/animations/wow.min.js"></script>
-    <script src="scripts/jquery.jCounter-0.1.4.js"></script>
-    <script src="scripts/bootstrap-datepicker.min.js"></script>
-    <script src="scripts/audio.min.js"></script>
-    <script src="scripts/goodshare.min.js"></script>
-    <script src="scripts/custom.js"></script>
-
-
-</body></html>
+    <script src="dist/bundle.js"></script>
+</body>
+</html>

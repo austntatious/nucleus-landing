@@ -1,0 +1,28 @@
+{
+  "name": "nucleus-landing",
+  "version": "1.0.0",
+  "description": "landing page for nucleus tech",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austntatious/nucleus-landing.git"
+  },
+  "keywords": [
+    "landing",
+    "page"
+  ],
+  "author": "Austin T",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/austntatious/nucleus-landing/issues"
+  },
+  "homepage": "https://github.com/austntatious/nucleus-landing#readme",
+  "dependencies": {
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.2"
+  }
+}
