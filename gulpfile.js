@@ -8,7 +8,15 @@ var gulp 		= require('gulp'),
 
 gulp.task('default', ['build:css', 'build:js']);
 
-gulp.task('build:js', function() {
+gulp.task('build:jquery', function() {
+	return gulp.src('./src/js/jquery/*.js')
+		.pipe(concat('vendor.js'))
+		.pipe(gulp.dest('./dist/js/'))
+		.pipe(uglifyJs().on('error', gulpUtil.log))
+		.pipe(gulp.dest('./dist/js/'));
+});
+
+gulp.task('build:mainjs', function() {
 	return gulp.src('./src/js/*.js')
 		.pipe(concat('bundle.js'))
 		.pipe(gulp.dest('./dist/js/'))
