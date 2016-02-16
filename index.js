@@ -1,8 +1,10 @@
 var express 	= require('express'),
 	nodemailer	= require('nodemailer'),
 	app			    = express(),
+  dotenv      = require('dotenv'),
 	postContact;
 
+dotenv.load({ path: '.env' });
 
 // to do: add error handling and sanitation 
 
