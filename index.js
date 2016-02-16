@@ -1,9 +1,9 @@
 var express 	= require('express'),
 	nodemailer	= require('nodemailer'),
-	app			= express(),
+	app			    = express(),
 	postContact;
 
-app.post('/', postContact);
+app.post('/contact', postContact);
 
 postContact = function(req, res) {
   var transporter = nodemailer.createTransport({
