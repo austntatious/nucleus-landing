@@ -10,7 +10,7 @@ dotenv.load({ path: '.env' });
 
 
 app.get('/', function(req, res) {
-  res.sendFile('index.html');
+  res.sendFile('./index.html');
 });
 
 app.post('/contact', function(req, res) {
