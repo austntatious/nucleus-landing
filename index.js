@@ -8,9 +8,7 @@ dotenv.load({ path: '.env' });
 
 // to do: add error handling and sanitation 
 
-app.post('/contact', postContact);
-
-postContact = function(req, res) {
+app.post('/contact', function(req, res) {
   var transporter = nodemailer.createTransport({
     service: 'SendGrid',
     auth: {
@@ -50,7 +48,9 @@ postContact = function(req, res) {
     req.flash('success', { msg: 'Email has been sent successfully!' });
     res.redirect('/');
   });
-};
+});
+
+
 
 app.listen(3000, function() {
   console.log('App listening on post 3000!');
