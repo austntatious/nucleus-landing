@@ -8,6 +8,11 @@ dotenv.load({ path: '.env' });
 
 // to do: add error handling and sanitation 
 
+
+app.get('/', function(req, res) {
+  res.sendFile('index.html');
+});
+
 app.post('/contact', function(req, res) {
   var transporter = nodemailer.createTransport({
     service: 'SendGrid',
