@@ -3,6 +3,9 @@ var express 	= require('express'),
 	app			    = express(),
 	postContact;
 
+
+// to do: add error handling and sanitation 
+
 app.post('/contact', postContact);
 
 postContact = function(req, res) {
@@ -22,7 +25,7 @@ postContact = function(req, res) {
 
   if (errors) {
     req.flash('errors', errors);
-    return res.redirect('/contact');
+    return res.redirect('/');
   }
 
   var from = req.body.email,
@@ -46,3 +49,7 @@ postContact = function(req, res) {
     res.redirect('/');
   });
 };
+
+app.listen(3000, function() {
+  console.log('App listening on post 3000!');
+});
