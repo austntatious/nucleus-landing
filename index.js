@@ -1,14 +1,16 @@
 var express 	= require('express'),
 	nodemailer	= require('nodemailer'),
 	app			    = express(),
+  bodyParser  = require('body-parser'),
   dotenv      = require('dotenv'),
 	postContact;
 
 dotenv.load({ path: '.env' });
 
 // to do: add error handling and sanitation 
+app.use(bodyParser.json());
 
-app.post('/contact', function(req, res) {
+app.post('/', function(req, res) {
   var transporter = nodemailer.createTransport({
     service: 'SendGrid',
     auth: {
