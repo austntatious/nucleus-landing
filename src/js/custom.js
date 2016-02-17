@@ -421,12 +421,12 @@ $(document).ready(function () {
 
         highlight: function (element) {
             $(element)
-                .text('').addClass('error')
+                .text('').addClass('error');
         },
 
         success: function (element) {
             element
-                .text('').addClass('valid')
+                .text('').addClass('valid');
         }
     });
 
@@ -462,7 +462,7 @@ $(document).ready(function () {
                 }
             });
         } else {
-            $('#contact_submit').button('reset')
+            $('#contact_submit').button('reset');
         }
         return false;
     });
