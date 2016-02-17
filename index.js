@@ -35,7 +35,7 @@ app.post('/contact', function(req, res) {
     to: to,
     from: from,
     subject: subject,
-    text: contactname + body
+    text: name + body
   };
 
   transporter.sendMail(mailOptions, function(err) {
