@@ -25,16 +25,17 @@ app.post('/contact', function(req, res) {
 //  var errors = req.validationErrors();
 
 
-  var from = req.body.email,
-      body = req.body.message,
-      to = process.env.RECEIVING_EMAIL,
-      subject = 'Contact Form | Nucleus Landing Page';
+  var from        = req.body.contactemail,
+      body        = req.body.contactmessage,
+      name        = req.body.contactname,
+      to          = process.env.RECEIVING_EMAIL,
+      subject     = 'Contact Form | Nucleus Landing Page |';
 
   var mailOptions = {
     to: to,
     from: from,
     subject: subject,
-    text: body
+    text: contactname + body
   };
 
   transporter.sendMail(mailOptions, function(err) {
