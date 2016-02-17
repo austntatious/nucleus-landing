@@ -10,7 +10,7 @@ dotenv.load({ path: '.env' });
 // to do: add error handling and sanitation 
 app.use(bodyParser.json());
 
-app.post('/', function(req, res) {
+app.post('/contact', function(req, res) {
   var transporter = nodemailer.createTransport({
     service: 'SendGrid',
     auth: {
@@ -32,7 +32,7 @@ app.post('/', function(req, res) {
 
   var from = req.body.email,
       body = req.body.message,
-      to = 'your@email.com',
+      to = process.env.RECEIVING_EMAIL,
       subject = 'Contact Form | Nucleus Landing Page';
 
   var mailOptions = {
