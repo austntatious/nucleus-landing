@@ -10,8 +10,8 @@ dotenv.load({ path: '.env' });
 // to do: add error handling and sanitation 
 
 // use bodyparser.urlencoded for www-form-urlencoded
-app.use(app.use(bodyParser.urlencoded({ extended: false })));
-app.use(app.use(bodyParser.json()));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.post('/contact', function(req, res) {
   var transporter = nodemailer.createTransport({
