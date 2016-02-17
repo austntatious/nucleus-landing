@@ -21,10 +21,6 @@ app.post('/contact', function(req, res) {
 
 //  var errors = req.validationErrors();
 
-  if (errors) {
-    req.flash('errors', errors);
-    return res.redirect('/');
-  }
 
   var from = req.body.email,
       body = req.body.message,
