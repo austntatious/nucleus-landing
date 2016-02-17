@@ -39,11 +39,9 @@ app.post('/contact', function(req, res) {
 
   transporter.sendMail(mailOptions, function(err) {
     if (err) {
-      req.flash('errors', { msg: err.message });
-      return res.redirect('/');
+      return res.json({error: err});
     }
-    req.flash('success', { msg: 'Email has been sent successfully!' });
-    res.redirect('/');
+    res.json({ msg: 'Email has been sent successfully!' });
   });
 });
 
