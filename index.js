@@ -27,6 +27,7 @@ app.post('/contact', function(req, res) {
 
   var from        = req.body.contactemail,
       body        = req.body.contactmessage,
+      phone       = req.body.contactphone,
       name        = req.body.contactname,
       to          = process.env.RECEIVING_EMAIL,
       subject     = 'Contact Form | Nucleus Landing Page |';
@@ -35,7 +36,7 @@ app.post('/contact', function(req, res) {
     to: to,
     from: from,
     subject: subject,
-    text: name + body
+    text: "New message from " + name + " and phone number: " + phone + "\n" + body
   };
 
   transporter.sendMail(mailOptions, function(err) {

@@ -448,7 +448,8 @@ $(document).ready(function () {
                 data: {
                     contactname: $('#contact_name').val(),
                     contactemail: $('#contact_email').val(),
-                    contactmessage: $('#contact_message').val()
+                    contactmessage: $('#contact_message').val(),
+                    contactphone: $('#contact_phone').val()
                 },
                 success: function () {
                     $('#contact_submit').button('reset');
